@@ -16,17 +16,17 @@ The bell block will ignore the block event if the type isn’t 1 (return false).
 `net.minecraft.block.entity.BellBlockEntity`
 ```Java
 @Override
-    public boolean onSyncedBlockEvent(int type, int data) {
-        if (type == 1) {
-            this.notifyMemoriesOfBell();
-            this.resonatingTicks = 0;
-            this.lastSideHit = Direction.byId(data);
-            this.ringTicks = 0;
-            this.ringing = true;
-            return true;
-        }
-        return super.onSyncedBlockEvent(type, data);
+public boolean onSyncedBlockEvent(int type, int data) {
+    if (type == 1) {
+        this.notifyMemoriesOfBell();
+        this.resonatingTicks = 0;
+        this.lastSideHit = Direction.byId(data);
+        this.ringTicks = 0;
+        this.ringing = true;
+        return true;
     }
+    return super.onSyncedBlockEvent(type, data);
+}
 ```
 
 `net.minecraft.block.entity.BlockEntity`
@@ -34,5 +34,5 @@ The bell block will ignore the block event if the type isn’t 1 (return false).
 // just a complicated way to return false?
 public boolean onSyncedBlockEvent(int type, int data) {
         return false;
-    }
+}
 ```
