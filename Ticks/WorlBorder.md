@@ -1,7 +1,8 @@
+# What Happens
 `net.minecraft.world.border.WorldBorder.tick` is called in the game loop.
 The only thing that will happen during this “ticking” of the world border is checking if the world border needs to change in size, and then executing that.
 
-Code:  
+# Code  
 `ServerWorld.tick()`:
 ```Java
 public void tick(BooleanSupplier shouldKeepTicking) {
