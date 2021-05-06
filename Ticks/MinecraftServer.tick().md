@@ -1,3 +1,4 @@
+# What Happens?
 This method is called in runServer()
 
 1) Basic tick initialisation:
@@ -9,7 +10,7 @@ This method is called in runServer()
 7) Update snooper if ticks is divisible by 6000
 8) Tallying (calculate the length of the tick in ms)
 
-Code:
+# Code
 ```Java
 protected void tick(BooleanSupplier shouldKeepTicking) {
         long l = Util.getMeasuringTimeNano();
