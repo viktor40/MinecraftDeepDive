@@ -46,7 +46,8 @@ Next in this part of the tick sleeping happens. First the time of day will be se
 
 # Daylight Cycle:
 Curiously, the time of day will also change within the weather section. In this part the world time will be increased by one. If daylight cycle is enabled, the time of day will also change.
-What about lightning strikes?
+
+# What about lightning strikes?
 Well lightning strikes don’t happen in this part of the tick but rather in the chunk part, which is the next part we’ll cover.
 
 
