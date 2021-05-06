@@ -1,3 +1,4 @@
+# What Happens?
 This method is called in `ServerWorld.tickWorlds()`
 1) World border
 2) Weather
@@ -39,7 +40,8 @@ This method is called in `ServerWorld.tickWorlds()`
       different to the spawning in the chunk ticks
 9) block entities
 
-Code (+ some comments of mine I used to keep track of what happens):
+# Code 
+(includes some comments of mine I used to keep track of what happens)
 ```Java
 public void tick(BooleanSupplier shouldKeepTicking) {
         boolean bl4;
