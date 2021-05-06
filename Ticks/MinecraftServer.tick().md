@@ -3,7 +3,7 @@ This method is called in runServer()
 1) Basic tick initialisation:
 2) Increase the number of ticks by one
 3) Get the time of the start of the tick.
-4) Calling net.minecraft.server.MinecraftServer.tickWorlds
+4) Tick the world, i.e. calling net.minecraft.server.MinecraftServer.tickWorlds
 5) Some player managing
 6) Autosave if the ticks is divisible by 6000 (this.ticks % 6000 == 0)
 7) Update snooper if ticks is divisible by 6000
