@@ -7,6 +7,7 @@ When opening or closing the inventory
 If the type is one, it will set viewerCount = data and return true. Else it will return false.
 
 # Code
+`net.minecraft.block.entity.ChestBlockEntity`
 ```java
 @Override
 public boolean onSyncedBlockEvent(int type, int data) {
@@ -18,6 +19,7 @@ public boolean onSyncedBlockEvent(int type, int data) {
 }
 ```
 
+`net.minecraft.block.entity.BlockEntity`
 ```Java
 public boolean onSyncedBlockEvent(int type, int data) {
     return false;
