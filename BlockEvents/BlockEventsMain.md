@@ -38,6 +38,17 @@ the data of the block event (see next section for how data is determined)
 
 After this the `onSynchedBlockEvents` method will be called. After this there are 2 possibilities. It’s either a block entity or a normal block. There is a difference between those two in what happens. More about this will be discussed later
 
+```Java
+private void processSyncedBlockEvents() {
+        // While the block event que is not empty
+        while (!this.syncedBlockEventQueue.isEmpty()) {
+            BlockEvent blockEvent = (BlockEvent)this.syncedBlockEventQueue.removeFirst();
+            if (!this.processBlockEvent(blockEvent)) continue;
+            this.server.getPlayerManager().sendToAround(null, blockEvent.getPos().getX(), blockEvent.getPos().getY(), blockEvent.getPos().getZ(), 64.0, this.getRegistryKey(), new BlockEventS2CPacket(blockEvent.getPos(), blockEvent.getBlock(), blockEvent.getType(), blockEvent.getData()));
+        }
+    }
+```
+
 # Types, data and specifics (addSynchedBlockEvent):
 The order in which block events happen is both locational and directional since it is stored in a hashset.
 Things that call: net.minecraft.server.world.serverworld.addSyncedBlockEvent
