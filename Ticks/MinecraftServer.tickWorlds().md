@@ -1,3 +1,4 @@
+# What Happens?
 This method is called in `MinecraftServer.tick()`
 
 1) Tick the command function manager
@@ -7,7 +8,7 @@ This method is called in `MinecraftServer.tick()`
 5) Update player latency
 6) Server GUI Refresh
 
-Code:
+# Code
 ```Java
 protected void tickWorlds(BooleanSupplier shouldKeepTicking) {
         this.profiler.push("commandFunctions");
