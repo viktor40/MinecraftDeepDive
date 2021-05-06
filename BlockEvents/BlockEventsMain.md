@@ -79,9 +79,9 @@ Things that call: net.minecraft.server.world.serverworld.addSyncedBlockEvent
         A piston block creates block events when it starts extending or retracting and during it’s movement.
     
 - Chest Block  
-Type 1 = 1  
+    Type 1 = 1  
     data = the amount of players viewing the inventory
-        When opening or closing the inventory
+    When opening or closing the inventory
 
 - End Gateway Block  
     Type 1 = 1  
