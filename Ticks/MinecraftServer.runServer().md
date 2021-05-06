@@ -1,3 +1,4 @@
+# What happens?
 This is the main server loop.
 
 1) Initialise the loop
@@ -13,7 +14,7 @@ This is the main server loop.
 If an exception occurs this loop will shut down the server and try to create and save a crash report.
 This will also create the main game thread.
 
-Code:  
+# Code
 ```Java
 protected void runServer() {
         try {
